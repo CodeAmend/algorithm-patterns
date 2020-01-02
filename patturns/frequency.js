@@ -1,3 +1,25 @@
+function validAnagram(str1, str2) {
+  // Create object ledger of array 1
+  charCountLedger = {};
+  for(let char of str1) {
+    charCountLedger[char] = (charCountLedger[char] || 0) + 1
+  }
+
+  for (letter of str2) {
+    if (charCountLedger[letter]) {
+      charCountLedger[letter] -=1
+    } else {
+      return false
+    }
+  }
+  return true;
+}
+
+console.log(validAnagram('carr', 'racr'));
+console.log(validAnagram('carr', 'erac'));
+
+
+
 function same(arr1, arr2) {
   // iterate both arrays
   let usedCount1 = {};
@@ -25,6 +47,6 @@ const a = [1, 2, 3, 4, 3, 3, 2, 9];
 const b = [1, 4, 9, 9, 16, 4, 9, 81];
 const c = [1, 9, 4, 16];
 const d = [9, 4, 16, 9, 9, 81, 1, 4];
-console.log(same(a, b)); // true;
-console.log(same(a, d)); // true;
+// console.log(same(a, b)); // true;
+// console.log(same(a, d)); // true;
 // console.log(same(a, d)); // false;
