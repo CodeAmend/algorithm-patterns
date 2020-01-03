@@ -15,10 +15,8 @@ function validAnagram(str1, str2) {
   return true;
 }
 
-console.log(validAnagram('carr', 'racr'));
+console.log(validAnagram('car r', 'rac r'));
 console.log(validAnagram('carr', 'erac'));
-
-
 
 function same(arr1, arr2) {
   // iterate both arrays
@@ -47,6 +45,3 @@ const a = [1, 2, 3, 4, 3, 3, 2, 9];
 const b = [1, 4, 9, 9, 16, 4, 9, 81];
 const c = [1, 9, 4, 16];
 const d = [9, 4, 16, 9, 9, 81, 1, 4];
-// console.log(same(a, b)); // true;
-// console.log(same(a, d)); // true;
-// console.log(same(a, d)); // false;
